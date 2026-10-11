@@ -1,0 +1,89 @@
+/* Estilos del CV de Josué Rodríguez */
+:root{
+  --negro:#0a0a0a; --rojo:#d00000; --naranja:#ff6a00; --amarillo:#ffd400; --gris:#f3f3f1;
+  --degradado:linear-gradient(90deg,#000 0%,#8a0000 28%,#e10000 52%,#ff6a00 78%,#ffd400 100%);
+  --rombos:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 2 46 24 24 46 2 24Z' fill='none' stroke='white' stroke-opacity='.3' stroke-width='1.5'/%3E%3Cpath d='M24 14 34 24 24 34 14 24Z' fill='white' fill-opacity='.14'/%3E%3C/svg%3E");
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Roboto',system-ui,sans-serif;color:#1c1c1c;background:#fff}
+h1,h2,h3,h4,.nav-link,.btn{font-family:'Teko',sans-serif;letter-spacing:.03em}
+
+/* NAVBAR: degradado + rombos que aparecen hacia la derecha */
+.navbar-jersey{background:var(--degradado);position:fixed;top:0;left:0;right:0;z-index:1030;padding:.35rem 0;overflow:hidden}
+.navbar-jersey::before{content:"";position:absolute;inset:0;background:var(--rombos);
+  -webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 85%);mask-image:linear-gradient(90deg,transparent 15%,#000 85%);pointer-events:none}
+.navbar-jersey .container{position:relative}
+.navbar-jersey .navbar-brand img{height:44px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
+.navbar-jersey .nav-link{color:#fff;font-size:1.35rem;font-weight:600;text-transform:uppercase;padding:.3rem 1rem;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.navbar-jersey .nav-link:hover,.navbar-jersey .nav-link.active{color:#fff;background:rgba(0,0,0,.28);clip-path:polygon(10% 0,100% 0,90% 100%,0 100%)}
+.navbar-toggler{border:2px solid #fff}.navbar-toggler-icon{filter:invert(1)}
+@media(max-width:991px){.navbar-jersey .navbar-collapse{background:rgba(0,0,0,.55);padding:.5rem;margin-top:.4rem}}
+
+/* HERO */
+.hero{background:var(--degradado);position:relative;color:#fff;padding:7.5rem 0 5rem;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:var(--rombos);background-size:110px;
+  -webkit-mask-image:linear-gradient(100deg,transparent 30%,#000);mask-image:linear-gradient(100deg,transparent 30%,#000)}
+.hero .container{position:relative}
+.hero h1{font-size:clamp(3.4rem,9vw,6.2rem);line-height:.95;margin:0;font-weight:700;text-shadow:0 3px 10px rgba(0,0,0,.35)}
+.hero .rol{font-size:1.5rem;margin-top:.8rem;font-weight:500}
+.foto{width:230px;height:230px;object-fit:cover;object-position:top;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 6px rgba(0,0,0,.35),0 14px 30px rgba(0,0,0,.4)}
+.btn-jersey{background:#fff;color:#111;border:0;font-size:1.25rem;border-radius:0;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%);padding:.35rem 1.8rem}
+.btn-jersey:hover{background:var(--negro);color:#fff}
+.btn-oscuro{background:var(--negro);color:#fff;border:0;border-radius:0;font-size:1.2rem;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%);padding:.3rem 1.6rem}
+.btn-oscuro:hover{background:var(--rojo);color:#fff}
+
+/* SECCIONES */
+section{padding:4.5rem 0}
+.alt{background:var(--gris)}
+.titulo{font-size:2.8rem;font-weight:700;margin-bottom:1.8rem;display:flex;align-items:center;gap:.7rem}
+.titulo::before{content:"";width:16px;height:16px;background:var(--rojo);transform:rotate(45deg);flex:none}
+.panel-cv{background:#fff;border-left:5px solid var(--rojo);padding:1.2rem 1.4rem;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.panel-cv h3{font-size:1.7rem;margin:0}
+.panel-cv .sub{color:#666;margin:0}
+.mapa{width:100%;height:200px;border:0;display:block;margin-bottom:.4rem}
+.chip{display:inline-flex;align-items:center;gap:.45rem;border:1.5px solid #111;padding:.1rem .8rem .1rem .6rem;margin:0 .35rem .5rem 0;font-size:.95rem;background:#fff}
+.chip::before{content:"";width:7px;height:7px;background:var(--rojo);transform:rotate(45deg);flex:none}
+.progress{height:1.5rem;border-radius:0;background:#ddd}
+.progress-bar{background:var(--degradado)}
+.idioma{display:flex;justify-content:space-between;font-family:'Teko',sans-serif;font-size:1.25rem;line-height:1.1}
+
+/* PROYECTOS */
+.proy{background:#fff;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.proy .etiqueta{background:var(--negro);color:#fff;padding:.3rem 1rem;font-family:'Teko',sans-serif;font-size:1.4rem;letter-spacing:.04em}
+.proy .cuerpo{padding:1rem 1.2rem 1.3rem}
+.proy ul{padding-left:1.1rem;margin:.6rem 0 0;font-size:.95rem}
+.proy-adi{border:3px solid transparent;border-image:var(--degradado) 1}
+.proy-adi .etiqueta{background:var(--degradado)}
+.insignia{display:inline-block;background:var(--amarillo);color:#111;font-family:'Teko',sans-serif;padding:0 .7rem;font-size:1.05rem;margin-left:.6rem;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+
+/* MODAL QR */
+.modal-header{background:var(--degradado);color:#fff;border:0}
+.modal-header .btn-close{filter:invert(1)}
+.qr-box{text-align:center;border:2px solid #111;padding:1rem}
+.qr-box img{width:190px;max-width:100%;image-rendering:pixelated}
+.qr-box h4{font-size:1.7rem;margin:.2rem 0 .6rem}
+
+/* CONTACTO */
+footer{background:#000;color:#fff;padding:3rem 0}
+footer .corchete{font-size:6rem;line-height:1;font-family:'Teko',sans-serif;color:var(--naranja)}
+footer a{color:#fff;text-decoration:none}footer a:hover{color:var(--amarillo)}
+footer h3{font-size:1.8rem}
+.nav-link:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid var(--amarillo);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* CERTIFICACIONES */
+.cert{background:#fff;height:100%;border-top:5px solid transparent;border-image:var(--degradado) 1;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:1.3rem 1.3rem 1.4rem;text-align:center;display:flex;flex-direction:column}
+.cert img.insig{width:130px;height:130px;margin:0 auto .6rem}
+.cert img.miniatura{width:auto;max-width:100%;height:130px;border:1px solid #ccc;box-shadow:0 2px 6px rgba(0,0,0,.12);margin:0 auto .6rem}
+.cert h3{font-size:1.65rem;line-height:1.05;margin:0}
+.cert .fecha{color:#666;margin:.2rem 0 .7rem}
+.cert .desc{font-size:.93rem;text-align:left;margin-bottom:.8rem}
+.cert .chips{text-align:left;margin-bottom:.4rem}
+.cert .chip{font-size:.8rem;padding:.05rem .55rem .05rem .45rem;margin:0 .25rem .35rem 0}
+.cert .acciones{margin-top:auto;padding-top:.5rem}
+.cert .verif{margin:.7rem 0 0;font-size:.9rem}
+.cert .btn-oscuro{font-size:1.05rem;padding:.2rem 1.2rem}
+.cert .btn-oscuro:disabled{opacity:.5}
+.nac{opacity:.92;margin:-.2rem 0 1.4rem}
+#modalInsignia img{width:100%;height:auto;display:block}
+@media(min-width:992px) and (max-width:1199px){.navbar-jersey .nav-link{padding:.3rem .55rem;font-size:1.25rem}}
