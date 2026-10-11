@@ -87,3 +87,6 @@ footer h3{font-size:1.8rem}
 .nac{opacity:.92;margin:-.2rem 0 1.4rem}
 #modalInsignia img{width:100%;height:auto;display:block}
 @media(min-width:992px) and (max-width:1199px){.navbar-jersey .nav-link{padding:.3rem .55rem;font-size:1.25rem}}
+
+/* IDIOMAS (O BANDERAS) */
+.idioma .fi{margin-left:.35rem;border-radius:2px}
