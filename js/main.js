@@ -104,3 +104,22 @@ document.getElementById('modalInsignia').addEventListener('show.bs.modal',functi
   panel.addEventListener('show.bs.collapse', function () { boton.setAttribute('aria-label', 'Cerrar menú'); });
   panel.addEventListener('hide.bs.collapse', function () { boton.setAttribute('aria-label', 'Abrir menú'); });
 })();
+
+/* Formulario de contacto (Formspree): envía sin salir de la página */
+(function () {
+  var f = document.getElementById('formContacto');
+  if (!f || !window.fetch) return;
+  var estado = document.getElementById('fEstado'), boton = document.getElementById('fEnviar');
+  function msg(t, c) { estado.textContent = t; estado.className = 'ms-3 ' + (c || ''); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    boton.disabled = true; msg('Enviando…');
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (r.ok) { f.reset(); msg('¡Mensaje enviado! Gracias por escribirme.', 'ok'); }
+        else { msg('No se pudo enviar. Intenta de nuevo o escríbeme por correo o WhatsApp.', 'error'); }
+      })
+      .catch(function () { msg('Sin conexión. Intenta de nuevo o escríbeme por WhatsApp.', 'error'); })
+      .then(function () { boton.disabled = false; });
+  });
+})();
