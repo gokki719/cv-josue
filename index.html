@@ -45,6 +45,7 @@
         <p class="mb-2">Desarrollo web, desarrollo de software, bases de datos.</p>
         <p class="nac">Fecha de nacimiento: 7 de enero de 2004</p>
         <a class="btn btn-jersey" href="#proyectos">Ver proyectos</a>
+        <a class="btn btn-jersey btn-cv ms-2" href="CV_Josue_Rodriguez.pdf" download="CV_Josue_Rodriguez.pdf"><i class="bi bi-download me-1" aria-hidden="true"></i>Descargar CV (PDF)</a>
       </div>
     </div>
   </div>
@@ -263,7 +264,41 @@
 </section>
 
 <!-- CONTACTO -->
-<footer id="contacto" class="pie">
+<section id="contacto">
+  <div class="container">
+    <h2 class="titulo">Contacto</h2>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <form id="formContacto" class="form-cv" action="https://formspree.io/f/xkjjwlwo" method="POST">
+          <p class="mb-3">¿Dudas, sugerencias o una propuesta? Escríbeme y me llega directo a mi correo.</p>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="fNombre">Nombre</label><input class="form-control" id="fNombre" name="nombre" type="text" autocomplete="name" required></div>
+            <div class="col-md-6"><label class="form-label" for="fCorreo">Tu correo</label><input class="form-control" id="fCorreo" name="email" type="email" autocomplete="email" required></div>
+            <div class="col-12"><label class="form-label" for="fMotivo">Motivo</label>
+              <select class="form-select" id="fMotivo" name="motivo">
+                <option>Duda</option><option>Sugerencia</option><option>Propuesta o colaboración</option><option>Otro</option>
+              </select></div>
+            <div class="col-12"><label class="form-label" for="fMensaje">Mensaje</label><textarea class="form-control" id="fMensaje" name="message" rows="5" required></textarea></div>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+            <input type="hidden" name="_subject" value="Mensaje desde mi CV virtual">
+            <div class="col-12"><button type="submit" class="btn btn-oscuro" id="fEnviar">Enviar mensaje</button><span id="fEstado" class="ms-3" role="status" aria-live="polite"></span></div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <div class="panel-cv panel-wa">
+          <h3>¿Prefieres WhatsApp?</h3>
+          <p class="sub mb-2"><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i><a href="tel:+525567769159">+52 55 6776 9159</a></p>
+          <p>Mándame un mensaje directo y te respondo por ahí.</p>
+          <a class="btn btn-wa" href="https://wa.me/525567769159?text=Hola%20Josu%C3%A9%2C%20vi%20tu%20CV%20y%20quiero%20contactarte." target="_blank" rel="noopener"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>Escríbeme por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIE -->
+<footer id="pie" class="pie">
   <canvas id="estrellas" aria-hidden="true"></canvas>
   <div class="container pie-contenido">
     <div class="row g-5 align-items-start">
@@ -282,6 +317,10 @@
           <li>
             <span class="pie-ico"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
             <div><strong>UNAM · FES Cuautitlán</strong><span>Estudiante de Informática</span></div>
+          </li>
+          <li>
+            <span class="pie-ico"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
+            <div><a href="https://wa.me/525567769159" target="_blank" rel="noopener">+52 55 6776 9159</a><span>WhatsApp</span></div>
           </li>
           <li>
             <span class="pie-ico"><i class="bi bi-envelope-fill" aria-hidden="true"></i></span>
