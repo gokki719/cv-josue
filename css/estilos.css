@@ -159,3 +159,21 @@ section{padding:4.5rem 0}
 }
 @keyframes menuEntra{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.hamb span,.navbar-toggler::before,.navbar-jersey .nav-link::before{transition:none}.navbar-toggler[aria-expanded="true"] ~ .navbar-collapse .nav-item,.hero-fondo .capa1,.hero-fondo .capa2{animation:none}}
+
+/* ===== Formulario de contacto y WhatsApp ===== */
+.form-cv .form-label{font-weight:500;margin-bottom:.25rem}
+.form-cv .form-control,.form-cv .form-select{border-radius:0;border:1px solid #c9c9c9;padding:.6rem .8rem}
+.form-cv .form-control:focus,.form-cv .form-select:focus{border-color:var(--rojo);box-shadow:0 0 0 .2rem rgba(208,0,0,.15)}
+.btn-wa{background:#1fa855;color:#fff;border:0;border-radius:0;font-size:1.15rem;clip-path:polygon(4% 0,100% 0,96% 100%,0 100%);padding:.4rem 1.6rem}
+.btn-wa:hover{background:#17874a;color:#fff}
+#fEstado{font-weight:500}
+#fEstado.ok{color:#1b7a3d}
+#fEstado.error{color:var(--rojo)}
+.panel-wa{height:auto}
+.panel-wa .sub a{color:inherit;text-decoration:none;font-weight:500}
+.panel-wa .sub a:hover{color:var(--rojo)}
+
+/* Botón descargar CV */
+.btn-cv{background:rgba(0,0,0,.45);color:#fff}
+.btn-cv:hover{background:#fff;color:#111}
+@media(max-width:575px){.btn-cv{margin:.6rem 0 0 0!important}}
